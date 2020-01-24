@@ -14,7 +14,7 @@ It supports only Linux for now. Because reading, writing and faking a device is 
 
 ## Linux
 
-Program depends on libusb>1 and Uinput>any
+Program depends on libusb>1 and Uinput>any /n
 make -f Makefile
 Run program as administrator.
 
