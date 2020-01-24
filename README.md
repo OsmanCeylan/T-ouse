@@ -8,37 +8,37 @@ Since tablet act like mouse, games like CS:GO can be playable with tablet, as th
 
 If you have your tablet data sheet, you can use this program as a tablet driver for any tablet.
 
-## Build
+# Build
 
 It supports only Linux for now. Because reading, writing and faking a device is hard in Windows. Not to mention HID stuffs.
 
-# Linux
+## Linux
 
 Program depends on libusb>1 and Uinput>any
 make -f Makefile
 Run program as administrator.
 
-## Use
+# Use
 
-# Usage 
+## Usage 
 --help:     Displays help
 --listall:  Lists all usb devices connected
 --device:   Displays all information about given device [VenID] [ProID]
 --use:      Runs program as given [VenID] [ProID] [Interface] [Endpoint]
 --test:     Act similar as --use but diplays device I/O data
 
-# Using
+## Using
 
 After finding tablet vendor and product id's, you need to determine which interface and endpoint yield input data.
 After finding all interface and endpoint numbers, you should test program with all interface and related endpoints with using --test. Only one interface and related endpoint dumps data on output. 
 
-## Configuring
+# Configuring
 
 Program uses touse.conf as configure file which contain tablet and fake mouse configurations.
 Current configurations works on Huion H420.(and probably majority of all Huions)
 For configuring other tablets, refer to configure file. There are instructions of how to do it.
 
-# X, Y, Z calculations
+## X, Y, Z calculations
 
 If you use tablet other than Huion (H)420, you need to also find calculation formulas.
 Before compiling the program;
