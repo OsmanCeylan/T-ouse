@@ -17,15 +17,20 @@ It supports only Linux for now. Because reading, writing and faking a device is 
 Program depends on libusb>1 and Uinput>any
 
 make -f Makefile
+
 Run program as administrator.
 
 # Use
 
 ## Usage 
 --help:     Displays help
+
 --listall:  Lists all usb devices connected
+
 --device:   Displays all information about given device [VenID] [ProID]
+
 --use:      Runs program as given [VenID] [ProID] [Interface] [Endpoint]
+
 --test:     Act similar as --use but diplays device I/O data
 
 ## Using
@@ -42,14 +47,21 @@ For configuring other tablets, refer to configure file. There are instructions o
 ## X, Y, Z calculations
 
 If you use tablet other than Huion (H)420, you need to also find calculation formulas.
+
 Before compiling the program;
 
 main.cpp, In function: void deviceloop(), replace the following lines with related formulas.
+
   /*---------------------------------
+  
   | @Huion general x,y,z calcualtion
+  
   ----------------------------------*/
+ 
    x = (data[3]*255 + data[2])*2;
+   
    y = (data[5]*255 + data[4])*2;
+   
    z = data[7]*255 + data[6];
 
 
